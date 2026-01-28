@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhil Joji | Web & Mobile Developer</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#8b5cf6',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-brand-dark text-white overflow-x-hidden antialiased selection:bg-brand-primary selection:text-white snap-y snap-mandatory h-screen overflow-y-scroll">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/80 border-b border-white/10"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#"
+                class="text-2xl font-bold font-heading tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                AJ.
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#education" class="hover:text-white transition-colors">Education</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section id="home" class="h-screen snap-start flex items-center justify-center relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl animate-float">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl animate-float"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 text-center z-10">
+
+
+            <h1
+                class="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight tracking-tight opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
+                Hi, I’m <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">Akhil
+                    Joji</span> <span class="inline-block animate-wiggle origin-bottom-right">👋</span>
+            </h1>
+
+            <h2
+                class="text-2xl md:text-3xl text-gray-400 font-light mb-8 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
+                MCA Student | Python Full Stack Developer Intern
+            </h2>
+
+            <p
+                class="max-w-2xl mx-auto text-lg text-gray-400 leading-relaxed mb-10 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.6s_forwards]">
+                I design and build smart systems that solve real-world problems,
+                with a strong focus on <span class="text-white font-medium">student safety</span>, <span
+                    class="text-white font-medium">system design</span>, and <span
+                    class="text-white font-medium">usability</span>.
+            </p>
+
+            <div
+                class="flex flex-col md:flex-row gap-4 justify-center items-center opacity-0 animate-[fadeInUp_0.8s_ease-out_0.8s_forwards]">
+                <a href="#projects"
+                    class="px-8 py-4 bg-white text-brand-dark font-bold rounded-full hover:bg-gray-200 transition-all transform hover:scale-105 shadow-lg shadow-white/10">
+                    View My Work
+                </a>
+                <a href="#contact"
+                    class="px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="h-screen snap-start relative overflow-hidden flex items-center bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <!-- Text Content -->
+                <div class="md:w-1/2">
+                    <h2 class="text-sm font-medium text-brand-primary tracking-widest uppercase mb-4">About Me</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold font-heading mb-8 leading-tight">
+                        Turning Concepts into <br> <span class="text-gray-400">Working Solutions.</span>
+                    </h3>
+
+                    <div class="space-y-6 text-lg text-gray-400 leading-relaxed">
+                        <p>
+                            I am an <span class="text-white font-medium">MCA student</span> passionate about
+                            building
+                            practical software solutions.
+                            My interest lies in <span class="text-white">system-based applications</span>, <span
+                                class="text-white">mobile development</span>, and
+                            projects that directly impact users in real life.
+                        </p>
+                        <p>
+                            I enjoy turning ideas into functional applications and continuously enhancing my technical
+                            and problem-solving skills.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-4xl font-bold text-white mb-2">5+</h4>
+                            <p class="text-gray-500 text-sm uppercase tracking-wide">Years Coding</p>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-bold text-white mb-2">15+</h4>
+                            <p class="text-gray-500 text-sm uppercase tracking-wide">Projects Built</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="md:w-1/2 relative">
+                    <div
+                        class="relative z-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-primary/30 rounded-full blur-2xl">
+                        </div>
+                        <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-brand-accent/30 rounded-full blur-2xl">
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white mb-6 relative">Skills & Tools</h4>
+
+                        <div class="space-y-5 relative">
+                            <!-- Programming & Development -->
+                            <div>
+                                <p class="text-brand-primary font-semibold text-sm uppercase tracking-wide mb-2">
+                                    Programming & Development</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm">Python</span>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm">PHP</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm">JavaScript</span>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm">React
+                                        Native</span>
+                                </div>
+                            </div>
+
+                            <!-- Frameworks & Concepts -->
+                            <div>
+                                <p class="text-purple-400 font-semibold text-sm uppercase tracking-wide mb-2">Frameworks
+                                    & Concepts</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-lg text-sm">Django</span>
+                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-lg text-sm">REST
+                                        APIs</span>
+                                </div>
+                            </div>
+
+                            <!-- Tools & Platforms -->
+                            <div>
+                                <p class="text-green-400 font-semibold text-sm uppercase tracking-wide mb-2">Tools &
+                                    Platforms</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-lg text-sm">VS
+                                        Code</span>
+                                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-lg text-sm">Git &
+                                        GitHub</span>
+                                    <span
+                                        class="px-3 py-1 bg-green-500/20 text-green-300 rounded-lg text-sm">Firebase</span>
+                                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-lg text-sm">Google
+                                        Maps API</span>
+                                </div>
+                            </div>
+
+                            <!-- Areas of Interest -->
+                            <div>
+                                <p class="text-orange-400 font-semibold text-sm uppercase tracking-wide mb-2">Areas of
+                                    Interest</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-lg text-sm">System
+                                        Design</span>
+                                    <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-lg text-sm">Data
+                                        Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education"
+        class="min-h-screen snap-start py-24 relative overflow-hidden flex items-center bg-gradient-to-b from-brand-dark to-brand-dark/95">
+        <div class="max-w-5xl mx-auto px-6 w-full">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-medium text-brand-primary tracking-widest uppercase mb-4">Education</h2>
+                <h3 class="text-4xl md:text-6xl font-bold font-heading mb-6">Academic Journey</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Building a strong foundation in computer applications and
+                    software development.</p>
+            </div>
+
+            <div class="space-y-8 relative">
+                <!-- Timeline line -->
+                <div
+                    class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-brand-primary via-brand-accent to-transparent hidden md:block">
+                </div>
+
+                <!-- MCA (Current) -->
+                <div class="relative pl-0 md:pl-20 group">
+                    <div
+                        class="absolute left-6 top-6 w-4 h-4 bg-brand-primary rounded-full ring-4 ring-brand-primary/20 hidden md:block group-hover:scale-125 transition-transform">
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-brand-primary/50 transition-all duration-300 hover:scale-105">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-2">Master of Computer Applications (MCA)
+                                </h4>
+                                <p class="text-brand-primary font-medium text-lg">Mangalam College Of Engineering</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span
+                                    class="inline-block px-4 py-2 bg-brand-primary/20 text-brand-primary rounded-full text-sm font-semibold">
+                                    2024 - Present
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Currently pursuing advanced studies in computer applications with focus
+                            on software development, system design, and emerging technologies.</p>
+                    </div>
+                </div>
+
+                <!-- BCA -->
+                <div class="relative pl-0 md:pl-20 group">
+                    <div
+                        class="absolute left-6 top-6 w-4 h-4 bg-brand-accent rounded-full ring-4 ring-brand-accent/20 hidden md:block group-hover:scale-125 transition-transform">
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-brand-accent/50 transition-all duration-300 hover:scale-105">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-2">Bachelor of Computer Applications (BCA)
+                                </h4>
+                                <p class="text-brand-accent font-medium text-lg">BVM College Cherpunkal</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span
+                                    class="inline-block px-4 py-2 bg-brand-accent/20 text-brand-accent rounded-full text-sm font-semibold">
+                                    2020 - 2024
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Completed undergraduate degree with comprehensive training in
+                            programming, database management, and software engineering fundamentals.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Learning Journey -->
+            <div class="mt-12">
+                <div
+                    class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300">
+                    <h4 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="text-3xl">🚀</span>
+                        Learning Journey
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-brand-primary text-xl">•</span>
+                            <p class="text-gray-300">Built academic and real-world projects during BCA and MCA.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-brand-primary text-xl">•</span>
+                            <p class="text-gray-300">Transitioned from web-based systems to mobile applications.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-brand-accent text-xl">•</span>
+                            <p class="text-gray-300">Gained experience in system architecture and documentation.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-brand-accent text-xl">•</span>
+                            <p class="text-gray-300">Continuously learning modern development practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Currently Working On -->
+            <div class="mt-8">
+                <div
+                    class="bg-gradient-to-br from-brand-primary/10 to-brand-accent/10 backdrop-blur-xl border border-brand-primary/20 rounded-2xl p-8 hover:border-brand-primary/40 transition-all duration-300">
+                    <h4 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="text-3xl">⚡</span>
+                        Currently Working On
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="text-brand-primary text-xl">→</span>
+                            <p class="text-gray-300">Enhancing the E-Bus Student Monitoring System</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-brand-primary text-xl">→</span>
+                            <p class="text-gray-300">Exploring data analytics fundamentals</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-brand-primary text-xl">→</span>
+                            <p class="text-gray-300">Improving mobile UI/UX design skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects"
+        class="min-h-screen snap-start py-24 relative overflow-hidden flex items-center bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-medium text-brand-primary tracking-widest uppercase mb-4">My Work</h2>
+                <h3 class="text-4xl md:text-6xl font-bold font-heading mb-6">Featured Projects</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">A collection of real-world projects focused on student
+                    safety, system design, and practical solutions.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Project 1: E-bus Mobile App -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-brand-primary/50 transition-all duration-300 hover:scale-105">
+                    <div
+                        class="absolute top-4 right-4 w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🔥</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2 pr-12">E-bus Student Monitoring &amp; Tracking</h4>
+                    <span
+                        class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-semibold mb-3">
+                        ⚡ Development Process
+                    </span>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">A cross-platform mobile app for real-time
+                        tracking of school buses with GPS integration and enhanced transport safety.</p>
+
+                    <div class="mb-4">
+                        <span class="text-xs text-brand-primary font-semibold uppercase tracking-wide">Tech Stack</span>
+                        <p class="text-gray-300 text-sm mt-1">TypeScript, Mobile Framework</p>
+                    </div>
+
+                    <div class="space-y-1 text-sm text-gray-400 mb-4">
+                        <p>✓ Live bus location tracking</p>
+                        <p>✓ Student/parent interface</p>
+                        <p>✓ Enhanced transport safety</p>
+                    </div>
+                    <a href="https://github.com/Akhiljoji145/E-bus-student-monitoring-and-bus-tracking-mobile-application"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary/20 hover:bg-brand-primary/30 text-brand-primary rounded-lg text-sm font-semibold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+
+                <!-- Project 2: E-Bus QR System -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-brand-accent/50 transition-all duration-300 hover:scale-105">
+                    <div
+                        class="absolute top-4 right-4 w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🚍</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 pr-12">E-Bus QR & Geo-Footprint System</h4>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Web-based project using QR codes and
+                        geo-tracking to monitor students and generate automated alerts.</p>
+
+                    <div class="mb-4">
+                        <span class="text-xs text-brand-accent font-semibold uppercase tracking-wide">Tech Stack</span>
+                        <p class="text-gray-300 text-sm mt-1">HTML, JavaScript, Backend</p>
+                    </div>
+
+                    <div class="space-y-1 text-sm text-gray-400 mb-4">
+                        <p>✓ QR-based check-in system</p>
+                        <p>✓ Geolocation alerts</p>
+                        <p>✓ Live monitoring dashboard</p>
+                    </div>
+                    <a href="https://github.com/Akhiljoji145/E-Bus-Student-Monitoring-System-QR-Based-Alert-and-Geo-Footprint-Tracking"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-brand-accent/20 hover:bg-brand-accent/30 text-brand-accent rounded-lg text-sm font-semibold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+
+                <!-- Project 3: Ecommerce -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300 hover:scale-105">
+                    <div
+                        class="absolute top-4 right-4 w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🛒</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 pr-12">Ecommerce Application</h4>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Full-featured ecommerce platform built from
+                        scratch with product browsing and cart functionality.</p>
+
+                    <div class="mb-4">
+                        <span class="text-xs text-green-400 font-semibold uppercase tracking-wide">Tech Stack</span>
+                        <p class="text-gray-300 text-sm mt-1">Python</p>
+                    </div>
+
+                    <div class="space-y-1 text-sm text-gray-400 mb-4">
+                        <p>✓ Product listing & browsing</p>
+                        <p>✓ Shopping cart system</p>
+                        <p>✓ User session management</p>
+                    </div>
+                    <a href="https://github.com/Akhiljoji145/ecommerce" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-lg text-sm font-semibold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+
+                <!-- Project 4: Movie Project 1 -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-yellow-500/50 transition-all duration-300 hover:scale-105">
+                    <div
+                        class="absolute top-4 right-4 w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🎬</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 pr-12">Movie Project 1</h4>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Python-based movie utility featuring database
+                        integration and interactive search capabilities.</p>
+
+                    <div class="mb-4">
+                        <span class="text-xs text-yellow-400 font-semibold uppercase tracking-wide">Tech Stack</span>
+                        <p class="text-gray-300 text-sm mt-1">Python</p>
+                    </div>
+
+                    <div class="space-y-1 text-sm text-gray-400 mb-4">
+                        <p>✓ Movie search & database</p>
+                        <p>✓ Data display interface</p>
+                        <p>✓ API integration</p>
+                    </div>
+                    <a href="https://github.com/Akhiljoji145/movieproject1" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-400 rounded-lg text-sm font-semibold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+
+                <!-- Project 5: Movie Project -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-pink-500/50 transition-all duration-300 hover:scale-105">
+                    <div
+                        class="absolute top-4 right-4 w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🎥</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 pr-12">Movie Project</h4>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Earlier version of movie exploration tool
+                        built with Python for learning and experimentation.</p>
+
+                    <div class="mb-4">
+                        <span class="text-xs text-pink-400 font-semibold uppercase tracking-wide">Tech Stack</span>
+                        <p class="text-gray-300 text-sm mt-1">Python</p>
+                    </div>
+
+                    <div class="space-y-1 text-sm text-gray-400 mb-4">
+                        <p>✓ Movie list & search</p>
+                        <p>✓ Simple interface</p>
+                        <p>✓ Basic functionality</p>
+                    </div>
+                    <a href="https://github.com/Akhiljoji145/movieproject" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-pink-500/20 hover:bg-pink-500/30 text-pink-400 rounded-lg text-sm font-semibold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+
+                <!-- Project 6: Parking Management -->
+                <div
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 hover:scale-105">
+                    <div
+                        class="absolute top-4 right-4 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🚗</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 pr-12">Online Vehicle Parking System</h4>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Complete parking management system with
+                        digital slot allocation and comprehensive admin controls.</p>
+
+                    <div class="mb-4">
+                        <span class="text-xs text-orange-400 font-semibold uppercase tracking-wide">Tech Stack</span>
+                        <p class="text-gray-300 text-sm mt-1">PHP, MySQL</p>
+                    </div>
+
+                    <div class="space-y-1 text-sm text-gray-400 mb-4">
+                        <p>✓ Login & registration</p>
+                        <p>✓ Slot management system</p>
+                        <p>✓ Admin dashboard</p>
+                    </div>
+                    <a href="https://github.com/Akhiljoji145/Online-Vehicle-Parking-Management-System" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 hover:bg-orange-500/30 text-orange-400 rounded-lg text-sm font-semibold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact"
+        class="min-h-screen snap-start py-24 relative overflow-hidden flex items-center bg-gradient-to-b from-brand-dark to-brand-dark/95">
+        <div class="max-w-5xl mx-auto px-6 w-full">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-medium text-brand-primary tracking-widest uppercase mb-4">Get In Touch</h2>
+                <h3 class="text-4xl md:text-6xl font-bold font-heading mb-6">Let's Connect</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Feel free to reach out for collaborations, opportunities, or
+                    just to say hello!</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+                <!-- Email Card -->
+                <a href="mailto:akhiljoji1451@gmail.com"
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-brand-primary/50 transition-all duration-300 hover:scale-105 text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-brand-primary/20 rounded-full flex items-center justify-center group-hover:bg-brand-primary/30 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8 text-brand-primary">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Email</h4>
+                    <p class="text-gray-400 text-sm break-all">akhiljoji1451@gmail.com</p>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="https://www.linkedin.com/in/akhiljoji/" target="_blank" rel="noopener noreferrer"
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                            class="w-8 h-8 text-blue-400">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">LinkedIn</h4>
+                    <p class="text-gray-400 text-sm">Connect with me</p>
+                </a>
+
+                <!-- GitHub Card -->
+                <a href="https://github.com/Akhiljoji145" target="_blank" rel="noopener noreferrer"
+                    class="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                            class="w-8 h-8 text-purple-400">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">GitHub</h4>
+                    <p class="text-gray-400 text-sm">View my code</p>
+                </a>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center pt-12 border-t border-white/10">
+                <p class="text-gray-400">© 2026 Akhil Joji. Built with passion and code.</p>
+                <p class="text-gray-500 text-sm mt-2">MCA Student | Python Full Stack Developer Intern</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
